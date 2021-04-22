@@ -40,7 +40,7 @@ mongoose.connect(
 app.use("/public", express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/frontend/dist/frontend'));
 
-app.use('/api/music', require('./routes/music'));
+app.use('/api/advice', require('./routes/advice'));
 
 app.get('*', function(req, res) {
   res.sendfile(path.join(__dirname + '/frontend/dist/frontend/index.html'));

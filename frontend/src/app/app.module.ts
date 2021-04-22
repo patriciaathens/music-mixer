@@ -7,6 +7,8 @@ import { MusicpageComponent } from './components/musicpage/musicpage.component';
 
 // import modules
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -22,6 +24,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     MatExpansionModule,
+    MatTabsModule,
     FormsModule, ReactiveFormsModule,
     MatToolbarModule,
     MatFormFieldModule, MatRadioModule, MatInputModule, MatSelectModule,
@@ -43,7 +48,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatGridListModule,
     MatButtonToggleModule,
     MatSlideToggleModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule,
+    NgxAudioPlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

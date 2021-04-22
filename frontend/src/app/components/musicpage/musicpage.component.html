@@ -1,1 +1,29 @@
-<p>musicpage works!</p>
+<div id="maincontainer">
+    <mat-toolbar>
+        <span><h1 class="title">halo.halo</h1></span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="toolbar-icon" aria-label="icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="toolbar-icon" aria-label="icon-button with code icon">
+            <mat-icon>code</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div id="infodiv">
+        <h2>mix mix your music!</h2>
+        <p>this is a paragraph about the application!</p>
+    </div>
+    <div id="musicdiv">
+        <button (click)="play()" mat-icon-button class="toolbar-icon" aria-label="icon-button with code icon">
+            <mat-icon>{{isplaying ? "clear" : "arrow_right"}}</mat-icon>
+        </button>
+        <mat-slider #volume aria-label="unit(s)"
+            [max]="1"
+            [min]="0"
+            [step]="0.01"
+            (input)="audio.volume = $event.value"
+            >
+        </mat-slider>{{ volume.value }}
+    </div>
+    <!-- <audio src="https://p.scdn.co/mp3-preview/6d00206e32194d15df329d4770e4fa1f2ced3f57#t=,1" controls></audio> -->
+</div>

@@ -1,0 +1,69 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// font stack & color variables
+$yeseva_fs: 'Yeseva One', serif
+$source_fs: 'Source Sans Pro', sans-serif
+$darkblue: #22223B
+$grayblue: #4A4E69
+$gray: #9A8C98
+$graypink: #C9ADA7
+$ivory: #F2E9E4
+
+::ng-deep *
+    margin: 0
+    padding: 0
+
+// text styling
+h1
+    font-family: $yeseva_fs
+    letter-spacing: 2px
+    color: $ivory
+p
+    font-family: $source_fs
+
+#maincontainer
+    background-color: $graypink
+    min-height: 100vh
+    min-width: 100vw
+.title
+    cursor: pointer
+mat-toolbar, mat-tab-group
+    padding: 1em 2em
+
+mat-toolbar
+    background-color: $grayblue
+.toolbar-icon
+    background-color: $grayblue
+    mat-icon
+        color: $ivory
+.toolbar-icon:hover
+    background-color: $darkblue
+    color: $graypink
+    transition: 0.2s
+    mat-icon
+        color: $graypink
+        transition: 0.2s
+.example-spacer
+    flex: 1 1 auto
+
+#infodiv, #musicdiv
+    padding: 5em
+
+#infodiv
+    float: left
+        
+
+#musicdiv
+    width: 60%
+    float: right
+mat-slider 
+    width: 300px
+::ng-deep .mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label,
+.mat-accent .mat-slider-track-fill
+    background-color: $grayblue
+::ng-deep .mat-slider-wrapper
+    background-color: $gray
+    border-radius: 5px
